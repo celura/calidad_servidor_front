@@ -1,0 +1,259 @@
+/* RegistroRiesgoPage.css */
+.registro-riesgo-container {
+  max-width: 1600px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1d232a;  
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-section h1 {
+  color: #a2ff00;
+  margin-bottom: 10px;
+}
+
+.software-info {
+  background: #2c3e50;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #a2ff00;
+}
+
+.software-info h3 {
+  margin: 0 0 5px 0;
+  color: #a2ff00;
+}
+
+.software-info p {
+  margin: 0;
+  color: #53bf57;
+  font-weight: 500  ;
+}
+
+.step-indicator {
+  margin-bottom: 30px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+  color: #6c757d;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  color: #a2ff00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cfcfcf;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #cfcfcf;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.risk-preview {
+  background: #2c3e50;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #2c3e50;
+  margin-top: 20px;
+}
+
+.risk-preview h3 {
+  margin-top: 0;
+  color: #a2ff00;
+}
+
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prev-button {
+  background: #6c757d;
+  color: white;
+}
+
+.prev-button:hover {
+  background: #5a6268;
+}
+
+.next-button,
+.submit-button {
+  background: #007bff;
+  color: white;
+}
+
+.next-button:hover,
+.submit-button:hover {
+  background: #0056b3;
+}
+
+.submit-button {
+  background: #28a745;
+}
+
+.submit-button:hover {
+  background: #218838;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registro-riesgo-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .steps {
+    gap: 10px;
+  }
+  
+  .step {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .wizard-nav {
+    flex-direction: column;
+  }
+  
+  .nav-button {
+    width: 100%;
+  }
+}
+
+/* Dark mode support */
+.dark-theme .registro-riesgo-container {
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+
+.dark-theme .software-info {
+  background: #34495e;
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+  background: #34495e;
+  border-color: #4a5568;
+  color: #ecf0f1;
+}
+
+.dark-theme .risk-preview {
+  background: #34495e;
+  border-color: #4a5568;
+}

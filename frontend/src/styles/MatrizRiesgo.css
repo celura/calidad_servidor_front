@@ -1,0 +1,72 @@
+.matriz-container {
+  margin: 1rem 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matriz-titulo {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.matriz {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #555;
+  background-color: #222;
+  padding: 0.5rem;
+}
+
+.fila {
+  display: flex;
+}
+
+.celda {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c2c2c;
+  position: relative;
+}
+
+.activo {
+  background-color: #ff3333;
+  border: 2px solid yellow;
+  animation: pulse 1s infinite;
+}
+
+.marcador {
+  font-size: 1.2rem;
+}
+
+.eje-x,
+.eje-y {
+  position: absolute;
+  color: #ccc;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.eje-x {
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eje-y {
+  top: 50%;
+  left: -2.5rem;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px yellow; }
+  50% { box-shadow: 0 0 15px red; }
+  100% { box-shadow: 0 0 5px yellow; }
+}

@@ -1,0 +1,169 @@
+.evaluation-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.evaluation-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.evaluation-meta {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.characteristic-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.characteristic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.characteristic-header:hover {
+  background: #e9ecef;
+}
+
+.characteristic-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-icon {
+  display: flex;
+  align-items: center;
+}
+
+.percentage-badge {
+  background: #4e73df;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+.characteristic-score {
+  font-weight: bold;
+  color: #4e73df;
+}
+
+.subcharacteristics-list {
+  padding: 1.5rem;
+}
+
+.characteristic-description {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.evaluation-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.evaluation-table th, .evaluation-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.evaluation-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.score-select, .comment-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.evaluation-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.global-score {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.score-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #4e73df;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-description span {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.excellent { background: #28a745; color: white; }
+.outstanding { background: #17a2b8; color: white; }
+.acceptable { background: #ffc107; color: #212529; }
+.insufficient { background: #fd7e14; color: white; }
+.deficient { background: #dc3545; color: white; }
+
+.evaluation-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-draft, .submit-evaluation {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-draft {
+  background: #6c757d;
+  color: white;
+}
+
+.submit-evaluation {
+  background: #28a745;
+  color: white;
+}
+
+.save-draft:hover, .submit-evaluation:hover {
+  opacity: 0.9;
+}

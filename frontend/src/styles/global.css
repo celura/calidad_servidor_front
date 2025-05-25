@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #0066cc;
+  --primary-dark: #193b5c;
+  --background-light: #1a1f25;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+
+  --input-background: #2a2f38;
+  --input-border: #3c3f45;
+  --input-text: #f0f0f0;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Formulario general */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-background);
+  color: var(--input-text);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Contraseña */
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Validaciones */
+.password-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.password-checklist li {
+  padding: 4px 6px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #444;
+}
+
+.password-checklist li.valid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.password-checklist li.invalid {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Botones */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Botón de alternancia de tema */
+.theme-toggle-auth-pages {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100;
+}

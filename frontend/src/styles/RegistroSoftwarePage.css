@@ -1,0 +1,256 @@
+.registro-container {
+  background-color: #1a1f25;
+  color: white;
+  padding: 30px;
+  min-height: 100vh;
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  background-color: #a2ff00;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.software-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.software-table th, .software-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.software-table th {
+  background-color: #a2ff00;
+  color: black;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.icon-button.view-result {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.icon-button.start-test {
+  background-color: #ffcc00;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.icon-button.assign-items {
+  background-color: #00ff55;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #1d232a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group-so {
+  margin-bottom: 15px;
+}
+
+.form-group-so label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-group-so input, .form-group-so textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.add-item-button {
+  background-color: #a2ff00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Participantes */
+.participante-item {
+  background-color: #2a3139;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.participante-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-sub-button {
+  background-color: #a2ff00;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.edit-button{
+  background-color: #a2ff00;
+  color: black;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.delate-button{
+  background-color: #ff5c5c;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.modal-overlay-pre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  color: #a2ff00;
+}
+
+.modal-pre {
+  background-color: #1a1f25;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+}
+
+.modal-title-pre {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  
+}
+
+.modal-actions-pre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.add-item-button-pre,
+.cancel-button-pre {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  
+}
+
+.add-item-button-pre {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cancel-button-pre {
+  background-color: #ccc;
+  color: black;
+
+}

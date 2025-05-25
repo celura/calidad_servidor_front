@@ -1,0 +1,11 @@
+@import './Loginpage.css';
+
+/* Cambiar orden del layout */
+.login-container.register-layout .login-left {
+  order: 2;
+}
+
+.login-container.register-layout .login-right {
+  order: 1;
+}
+

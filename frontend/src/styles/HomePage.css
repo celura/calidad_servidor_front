@@ -1,0 +1,140 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estructura básica de la página */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fondo con overlay */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, #2ab7d776, #0f0c2979),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/personas.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Contenido principal */
+.content {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 64px;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+/* Secciones de tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 32px auto;
+}
+
+.card-R {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 24px;
+  text-align: center;
+  border-right: 6px solid #4ADE80;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 24px;
+  text-align: center;
+}
+
+.card-alt {
+  background-color: rgba(29, 78, 78, 0.8); /* Teal semi-transparente */
+  border-left: 6px solid #4ADE80;
+}
+
+.card-title {
+  color: #4ADE80; /* Verde claro */
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.card-text {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .main-content {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

@@ -1,0 +1,107 @@
+/* ResultadosTabla.css */
+
+/* Estilos generales */
+.container {
+  background-color: #1a1f25;
+  min-height: 100vh;
+  color: white;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  border-radius: 16px;
+}
+
+.titulo {
+  font-size: 3.5rem;
+  margin: 2.5rem;
+  font-weight: 300;
+}
+
+/* Estilos para la tabla */
+.tabla-container {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-resultados th {
+  background-color: #a3e635; /* Color verde lima */
+  color: black;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.tabla-resultados thead tr {
+  border-bottom: 1px solid #333;
+}
+
+.tabla-resultados tbody tr {
+  border-bottom: 1px solid #333;
+  background-color: white;
+  color: black;
+}
+
+.tabla-resultados tbody tr.fila-vacia {
+  background-color: transparent;
+  color: white;
+  height: 48px;
+}
+
+.tabla-resultados td {
+  padding: 12px;
+}
+
+/* Estilos para las acciones */
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.boton-accion {
+  background-color: #e2e2e2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-accion:hover {
+  background-color: #d0d0d0;
+}
+
+/* Estilos para la paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.boton-pagina {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.boton-pagina.anterior {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.boton-pagina.siguiente {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.boton-pagina:hover {
+  background-color: #444;
+}

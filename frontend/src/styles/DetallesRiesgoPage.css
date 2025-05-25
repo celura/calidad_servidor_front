@@ -1,0 +1,91 @@
+.riesgo-detalle-container {
+  padding: 2rem;
+  background-color: #1a1f25;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.riesgo-detalle-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.riesgo-detalle-container h2 {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.riesgo-resumen,
+.riesgo-clasificacion,
+.riesgo-evaluacion,
+.riesgo-controles {
+  background-color: #2a2f38;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.riesgo-resumen h3,
+.riesgo-clasificacion h3,
+.riesgo-evaluacion h3,
+.riesgo-controles h3 {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.riesgo-resumen p,
+.riesgo-clasificacion p,
+.riesgo-evaluacion p,
+.riesgo-controles p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.riesgo-resumen strong,
+.riesgo-clasificacion strong,
+.riesgo-evaluacion strong,
+.riesgo-controles strong {
+  color: #ffd700;
+}
+
+.resultados-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.action-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #004d99;
+}
+
+.print-button {
+  background-color: #28a745;
+}
+
+.print-button:hover {
+  background-color: #1e7e34;
+}
+
+.loading,
+.error-message {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  color: #f44336;
+}
