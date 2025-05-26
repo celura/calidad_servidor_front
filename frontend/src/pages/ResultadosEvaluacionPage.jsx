@@ -30,7 +30,7 @@ export default function ResultadosEvaluacionPage() {
         setSoftware(softwareResponse.software); // Nota: la respuesta viene en { software: {...} }
 
         // 2. Obtener resultados de evaluación
-        const resultsResponse = await fetch(`http://localhost:5003/evaluacion/resultados/${softwareId}/${evaluationId}`, {
+        const resultsResponse = await fetch(`https://evaluacionmicrosrvicio-production.up.railway.app/evaluacion/resultados/${softwareId}/${evaluationId}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
