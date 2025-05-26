@@ -40,7 +40,7 @@ const fetchSoftwareList = async () => {
     const allSoftwares = allData.software || [];
 
     // 2. Trae solo los evaluados
-    const evalResponse = await fetch(`http://localhost:5003/evaluacion/software-evaluados/${user.id}`, {
+    const evalResponse = await fetch(`https://evaluacionmicrosrvicio-production.up.railway.app/evaluacion/software-evaluados/${user.id}`, {
       headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` },
     });
     const evaluated = await evalResponse.json();
