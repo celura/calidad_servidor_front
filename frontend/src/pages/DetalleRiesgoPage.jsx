@@ -18,7 +18,7 @@ export default function DetalleRiesgoPage() {
         const token = localStorage.getItem("token");
 
         // Cargar software
-        const softwareRes = await fetch(`http://localhost:5000/software/${softwareId}`, {
+        const softwareRes = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${softwareId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -30,7 +30,7 @@ export default function DetalleRiesgoPage() {
         setSoftware(softwareData.software);
 
         // Cargar detalle del riesgo
-        const response = await fetch(`http://localhost:5004/riesgo/detalle/${riskId}`, {
+        const response = await fetch(`https://riesgomicroservicio-production.up.railway.app/riesgo/detalle/${riskId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
