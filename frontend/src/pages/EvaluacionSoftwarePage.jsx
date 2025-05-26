@@ -24,7 +24,7 @@ export default function EvaluacionSoftwarePage() {
   useEffect(() => {
     const fetchSoftwareDetails = async () => {
       try {
-        const softwareResponse = await fetch(`http://localhost:5000/software/${user.id}/${softwareId}`, {
+        const softwareResponse = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${user.id}/${softwareId}`, {
           headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` },
         });
 
@@ -32,7 +32,7 @@ export default function EvaluacionSoftwarePage() {
         const softwareData = await softwareResponse.json();
         setSoftware(softwareData.software);
 
-        const characteristicsResponse = await fetch(`http://localhost:5002/modelo/caracteristicas-con-subcaracteristicas`, {
+        const characteristicsResponse = await fetch(`https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristicas-con-subcaracteristicas`, {
           headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` },
         });
 
@@ -90,7 +90,7 @@ export default function EvaluacionSoftwarePage() {
   const submitEvaluation = async () => {
     try {
       // Aquí está la corrección: URL /evaluar en lugar de /resultado/{software_id}/{evaluation_id}
-      const response = await fetch('http://localhost:5003/evaluacion/evaluar', {
+      const response = await fetch('https://evaluacionmicrosrvicio-production.up.railway.app/evaluacion/evaluar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
