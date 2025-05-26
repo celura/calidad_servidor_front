@@ -71,7 +71,7 @@ export default function RegistroRiesgoPage() {
         const tokenPayload = JSON.parse(atob(token.split('.')[1]));
         const userId = tokenPayload.user_id || tokenPayload.id || tokenPayload.sub;
 
-        const response = await fetch(`http://localhost:5000/software/${userId}/${softwareId}`, {
+        const response = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${userId}/${softwareId}`, {
           headers: { 
             "Authorization": `Bearer ${token}`
           },
@@ -123,7 +123,7 @@ export default function RegistroRiesgoPage() {
     const riskInfo = calcularNivelRiesgo();
 
     try {
-      const response = await fetch("http://localhost:5004/riesgo/registrar", {
+      const response = await fetch("https://riesgomicroservicio-production.up.railway.app/riesgo/registrar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
