@@ -33,7 +33,7 @@ const fetchSoftwareList = async () => {
 
   try {
     // 1. Trae todos los softwares
-    const allResponse = await fetch(`http://localhost:5000/software/${user.id}`, {
+    const allResponse = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${user.id}`, {
       headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` },
     });
     const allData = await allResponse.json();
@@ -123,7 +123,7 @@ const fetchSoftwareList = async () => {
         user_id: user.id // Incluir user_id en el payload
       };
       
-      const response = await fetch("http://localhost:5000/software/register", {
+      const response = await fetch("https://softwaremicroservicio-production.up.railway.app/software/register", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ const fetchSoftwareList = async () => {
     if (!user || !user.id) return;
     
     try {
-      const response = await fetch(`http://localhost:5000/software/${user.id}/${softwareId}`, {
+      const response = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${user.id}/${softwareId}`, {
         method: "GET",
         headers: { 
           "Authorization": `Bearer ${localStorage.getItem('token')}`
