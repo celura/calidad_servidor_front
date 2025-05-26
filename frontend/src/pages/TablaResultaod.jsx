@@ -35,7 +35,7 @@ export default function ResultadosTabla() {
         setLoading(true);
         setError(null);
         
-        const url = `http://localhost:5003/evaluacion/software-evaluados/${userId}`;
+        const url = `https://evaluacionmicrosrvicio-production.up.railway.app/evaluacion/software-evaluados/${userId}`;
         console.log(`Fetching from: ${url}`); // Para debugging
 
         const response = await fetch(url, {
