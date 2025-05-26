@@ -43,7 +43,7 @@ export default function GestionMitigacionPage() {
         console.log("Cargando datos para riskId:", riskId); // Debug
 
         // Obtener detalle del riesgo (incluye software y mitigación)
-        const detalleRes = await fetch(`http://localhost:5004/riesgo/detalle/${riskId}`, {
+        const detalleRes = await fetch(`https://riesgomicroservicio-production.up.railway.app/riesgo/detalle/${riskId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -57,7 +57,7 @@ export default function GestionMitigacionPage() {
         setSoftware(detalleData.software);
         
         // Obtener mitigación del riesgo específico
-        const mitigacionesRes = await fetch(`http://localhost:5004/riesgo/mitigacion/${riskId}`, {
+        const mitigacionesRes = await fetch(`https://riesgomicroservicio-production.up.railway.app/riesgo/mitigacion/${riskId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -99,7 +99,7 @@ export default function GestionMitigacionPage() {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5004/riesgo/actualizar/${mitigacionId}`, {
+      const response = await fetch(`https://riesgomicroservicio-production.up.railway.app/riesgo/actualizar/${mitigacionId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
