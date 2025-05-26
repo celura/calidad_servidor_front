@@ -26,11 +26,11 @@ export default function DashboardPage() {
   const loadCharacteristics = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:5002/modelo/caracteristica");
+      const res = await fetch("https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica");
       const data = await res.json();
       const enriched = await Promise.all(
         data.map(async (char) => {
-          const subRes = await fetch(`http://localhost:5002/modelo/caracteristica/${char.id}`);
+          const subRes = await fetch(`https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica/${char.id}`);
           const subData = await subRes.json();
           return { ...char, subcharacteristics: subData.subcharacteristics || [] };
         })
@@ -80,7 +80,7 @@ export default function DashboardPage() {
     }
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:5002/modelo/caracteristica", {
+      const res = await fetch("https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -109,7 +109,7 @@ export default function DashboardPage() {
     if (!confirm("¿Eliminar esta característica?")) return;
     setIsLoading(true);
     try {
-      const res = await fetch(`http://localhost:5002/modelo/caracteristica/${id}`, { method: "DELETE" });
+      const res = await fetch(`https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica/${id}`, { method: "DELETE" });
       if (res.ok) {
         alert("Item eliminado correctamente");
         loadCharacteristics();
@@ -127,7 +127,7 @@ export default function DashboardPage() {
     setEditMode(true);
     setEditItem(item);
     try {
-      const res = await fetch(`http://localhost:5002/modelo/caracteristica/${item.id}`);
+      const res = await fetch(`https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica/${item.id}`);
       const data = await res.json();
       setFormData({
         name: data.name,
@@ -146,7 +146,7 @@ export default function DashboardPage() {
     if (!editItem) return;
     setIsLoading(true);
     try {
-      const res = await fetch(`http://localhost:5002/modelo/caracteristica/${editItem.id}`, {
+      const res = await fetch(`https://modelocalidadmicroservicio-production.up.railway.app/modelo/caracteristica/${editItem.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
