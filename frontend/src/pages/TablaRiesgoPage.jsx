@@ -36,7 +36,7 @@ export default function TablaRiesgosPage() {
         setLoading(true);
         setError(null);
         
-        const url = `http://localhost:5004/riesgo/evaluaciones/${userId}`;
+        const url = `https://riesgomicroservicio-production.up.railway.app/riesgo/evaluaciones/${userId}`;
         console.log(`Fetching from: ${url}`); // Para debugging
 
         const response = await fetch(url, {
