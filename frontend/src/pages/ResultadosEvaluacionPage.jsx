@@ -19,7 +19,7 @@ export default function ResultadosEvaluacionPage() {
         const userId = tokenPayload.sub; // o tokenPayload.user_id, dependiendo de cómo esté estructurado tu JWT
 
         // 1. Obtener el software por ID usando el endpoint correcto
-        const softwareRes = await fetch(`http://localhost:5000/software/${userId}/${softwareId}`, {
+        const softwareRes = await fetch(`https://softwaremicroservicio-production.up.railway.app/software/${userId}/${softwareId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
